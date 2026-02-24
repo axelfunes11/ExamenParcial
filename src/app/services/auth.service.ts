@@ -7,7 +7,7 @@ import { of } from 'rxjs';
 export class AuthService {
 
   login(username: string, password: string) {
-    return of({ success: username === 'admin' && password === '1234' });
-  }
+    return of({ success: true });
+  } 
 
 }
