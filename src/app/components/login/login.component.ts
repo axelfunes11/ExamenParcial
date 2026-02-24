@@ -13,8 +13,12 @@ export class LoginComponent {
   constructor(private authService: AuthService) {}
 
   login() {
-    this.authService.login('admin', '1234')
-      .subscribe(res => console.log(res));
-  }
+  this.authService.login('admin', '1234')
+    .subscribe(response => {
+      if (response.success) {
+        console.log('Login correcto');
+      }
+    });
+}
 
 }
